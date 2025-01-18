@@ -13,10 +13,15 @@ public class LoginPage extends BasePage {
 
     }
 
-    private By usernameField = By.id("user-name");
-    private By passwordField = By.id("password");
-    private By loginButton = By.id("login-button");
 
+    @FindBy(id = "user-name")
+    WebElement usernameField;
+
+    @FindBy(id = "password")
+    WebElement passwordField;
+
+    @FindBy(id = "login-button")
+    WebElement loginButton;
 
 
     public void login(String username, String password){
